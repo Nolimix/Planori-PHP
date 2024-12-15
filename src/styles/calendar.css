@@ -1,1 +1,163 @@
+/*div.calendar * {*/
+/*    border: red solid 1px;*/
+/*}*/
+body {
+    background-color: whitesmoke;
+    color: #333;
+}
+div.calendar {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
 
+div.calendar div.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #333;
+    color: whitesmoke;
+    align-items: center;
+    /*position: sticky;*/
+    /*height: 5rem;*/
+    /*top: 0;*/
+}
+
+div.calendar div.header button {
+    display: flex;
+    color: whitesmoke;
+    background-color: #333333;
+    font-size: 1.1rem;
+    font-family: Arial, sans-serif;
+    padding: .5rem 1rem;
+    font-weight: bold;
+    align-items: center;
+    gap: .25rem;
+    cursor: pointer;
+    transition: color .2s;
+    border: none;
+}
+
+div.calendar div.header button:hover {
+    color: #c2c2c2;
+    transition: color .2s;
+}
+
+div.calendar div.header button i {
+    font-size: 1.5rem;
+}
+
+div.calendar div.header h2 {
+    font-size: 1.5rem;
+    font-family: Arial, sans-serif;
+    color: inherit;
+    margin: 0;
+}
+
+div.calendar div.visualizer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-height: 50vh;
+    overflow: auto;
+}
+
+div.calendar div.legend {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2.5rem;
+    margin: 1rem 0;
+}
+
+div.calendar div.legend div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .3rem;
+}
+
+div.calendar div.legend div div {
+    background-color: green;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 15%;
+}
+
+div.calendar div.legend div div.unknown {
+    background-color: #555;
+}
+
+div.calendar div.legend div div.available {
+    background-color: #22ad22;
+}
+
+div.calendar div.legend div div.unavailable {
+    background-color: #fa6f6f;
+}
+
+div.calendar div.legend div div.not-sure {
+    background-color: #d3ca1c;
+}
+
+/* Couleurs des cases */
+.case-verte {
+    background-color: #22ad22;
+    color: white;
+}
+
+.case-orange {
+    background-color: #d3ca1c;
+    color: white;
+}
+
+.case-rouge {
+    background-color: #fa6f6f;
+    color: white;
+}
+.case-inconnu {
+    background-color: #f0f0f0;
+    color:#333;
+}
+
+/* Styles du menu contextuel */
+.context-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 5px;
+    min-width: 120px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.context-menu li {
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+}
+
+.context-menu li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Couleurs de texte du menu contextuel */
+.context-menu .vert {
+    color: green;
+}
+
+.context-menu .orange {
+    color: orange;
+}
+
+.context-menu .rouge {
+    color: red;
+}

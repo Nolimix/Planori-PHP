@@ -1,0 +1,61 @@
+/** {*/
+/*    border: red 1px; */
+/*}*/
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    color: white;
+}
+
+body main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    flex: 1 0 auto;
+}
+
+body main #unavailable {
+    margin: 10rem 0;
+    font-family: Arial, sans-serif;
+}
+
+body main #unavailable h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #eee;
+}
+
+body main #unavailable p {
+    font-size: 1.1rem;
+    color: #ccc;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1200px) {
+    body main {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body main {
+        width: 98%;
+    }
+}

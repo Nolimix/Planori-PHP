@@ -1,0 +1,59 @@
+table#calendar {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    /*border: red solid 3px;*/
+    table-layout: fixed;
+}
+
+table#calendar p.date {
+    font-size: 0.7rem;
+    font-weight: normal;
+    margin: 0;
+    padding: 0
+}
+
+table#calendar p:not(.date){
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+table#calendar tr {
+    /*border: blue solid 2px;*/
+    text-align: center;
+    font-size: 1rem;
+    font-family: Kanit, sans-serif;
+}
+
+table#calendar tr:first-child td {
+    background-color: #333;
+    color: whitesmoke;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+}
+
+table#calendar tr td {
+    /*border: green solid 1px;*/
+    margin: 0;
+    padding: 0 0;
+    min-width: 2rem;
+    max-width: 2rem;
+    background-color: #555;
+    height: 3rem;
+}
+
+table#calendar tr td:first-child {
+    background-color: #333;
+    color: whitesmoke;
+    font-weight: bold;
+    /*border: red solid 1px;*/
+}
+
+table#calendar button {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+

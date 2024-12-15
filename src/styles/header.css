@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+}
+
+header .separator.vertical {
+    display: flex;
+    border: solid 1px #9f9f9f;
+    height: 55%;
+    align-self: center;
+    width: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .7rem 2rem;
+    background-color: burlywood;
+    border-bottom: 4px solid #B2936C; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Ubuntu, sans-serif;
+    font-variant: small-caps;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    color: #121212;
+}
+
+header div.container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+header .header.icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    color: inherit;
+    text-decoration: inherit;
+    /*border: solid red 1px;*/
+}
+
+header .header.icon img {
+    width: 4rem;
+    height: 4rem;
+}
+
+header .header.icon h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+header div div.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: fit-content;
+    gap: .6rem;
+    /*border: solid green 2px;*/
+}
+
+header div div.menu nav {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    /*border: solid red 1px;*/
+    gap: .7rem;
+    align-items: center;
+}
+
+header div.menu nav a {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    color: inherit;
+    text-decoration: inherit;
+    align-items: center;
+    /*justify-items: center;*/
+    padding: .5rem 0.2rem;
+    height: fit-content;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        width: 0;
+    }
+    to {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+@keyframes hide {
+    from {
+        opacity: 1;
+        width: 100%;
+    }
+    to {
+        opacity: 0;
+        width: 0;
+    }
+}
+
+header div.menu nav a p {
+    font-size: .9rem;
+    font-weight: bold;
+    margin: 0;
+/*    Transition with show keyframes */
+/*    animation: show 1s;*/
+}
+
+header div.menu nav a:hover {
+    border-bottom: #9f9f9f solid 2px;
+}
+
+/*header div div.menu nav a p.hidden {*/
+/*    !*display: none;*!*/
+/*}*/
+
+header div div.menu div.account {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    justify-content: center;
+    gap: .5rem;
+    /*border: yellow solid 1px;*/
+    padding: 0 0.25rem;
+}
+
+header div div.menu div.account div.connected {
+    border: None; /* Ajoute une border à l'utilisateur si envie */
+
+}
+
+header div div.menu div.account div.connected a {
+    display: flex;
+    flex-direction: row;
+    gap: .3rem;
+    font-size: 1.2rem;
+    color: inherit;
+    text-decoration: inherit;
+    align-items: center;
+    font-weight: bold;
+}
+
+header div div.menu div.account div.connected a img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 15%;
+}
+
+header div div.menu div.account div.hidden    {
+    display: none;
+}
+
+
+@media screen and (max-width: 1100px) {
+    header div div.menu nav a p {
+        display: none;
+    }
+
+    header div div.menu nav {
+        gap: .1rem;
+    }
+}
+
